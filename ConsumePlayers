@@ -16,4 +16,3 @@ def getLastMatchesByPuuid(region,puuid):
 def getMatchInfo(region,matchID):
     matchInfo=watcher.match.by_id(region,"LA1_1379648863")
     return matchInfo
-
