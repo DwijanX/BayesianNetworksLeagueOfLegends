@@ -5,6 +5,7 @@ import pandas as pd
 watcher = LolWatcher(api_key)
 region = 'la1'
 #Solo se puede hacer hasta 20 requests por segundo y 100 requests cada 2 minutos
+
 def getSummonerInfoBySummonerName(SmmName,region):
     summonerData=watcher.summoner.by_name(region, SmmName)
     return summonerData
