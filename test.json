@@ -1,0 +1,115 @@
+[
+    {
+        "metadata": {
+            "dataVersion": "2",
+            "matchId": "EUW1_6365751484",
+            "participants": [
+                "oo99rR32UPDJRHVzAXtoMVa3pDlQz1IptyLO4f_qhR8WzL9v3ObTJJNZJNJ6oanhteIOaWrJ5ZjF7g",
+                "88OenDOr4QdRPTBByQrZHTSd-v7fESkfgGNWACoXcU1cGIGgF1H1cBwEuhhoumt09xFpfTVzc5BxKg",
+                "3CRsTn7hLWlxjF_7O2j_EqT0w_tOixoTEjGsxAUd5R1G8ymVh66aZFf99iOi5eyqmDgCRzlWoGO-6A",
+                "kszwTxW9nSEujKWzfOnFO4vIkPbWZ-4HNTXFpZ9mY5a1GXFFPfjdN_pUJ878YwKlBKPP3xlGSmSw2A",
+                "GA3wB7oyLekl7RP899xaokv1WzD1L-2_TsCZqhRVWA8bjAT4jI09sPkPxMKpAhpQEgQLzv1AgCU-Gg",
+                "aohqGCIKnOr1TJHPcNvwP6CFwiMLgFhjTBiogWa_OaetomOCh_MM7-uY6MBmTpbx7NEW5-LOSE5Jsw",
+                "ILD2Ad4hNrp_YHDM5C0YFkAazJkhJ-RSO3ZLHMu2hgVx2LNQ0q8rP2kjkZOsrgJTOgK5VR8uuCiMcg",
+                "jucprOF5t_Q357HV0MS5eh2D7OeFvBlFOzWkjHIDzdnSceMXQZG9p4P6J5kkPCzkufoUbPO7TYxT1Q",
+                "_0sP_YJevZKsdKZ6_0f5RpMAv5oKrMq4-qbnPT099d1wwWawyPmED6yTfr99ThMBMqPhlCsQ9eEeKQ",
+                "E_V2LoGC3K-QrcT1e9TryrsRQ8rbItztYFOrmo-zPuZFSiYuEYZjEfGzUV3hNlW-NJgt4TRYDUK_tg"
+            ]
+        },
+        "info": {
+            "gameDuration": 1706,
+            "participants": [
+                {
+                    "summonerName": "Elephant eater",
+                    "teamPosition": "TOP",
+                    "goldEarned": 9420,
+                    "championName": "Malphite",
+                    "totalDamageDealtToChampions": 18942,
+                    "win": true
+                },
+                {
+                    "summonerName": "I Love Uber Eats",
+                    "teamPosition": "JUNGLE",
+                    "goldEarned": 11102,
+                    "championName": "Gragas",
+                    "totalDamageDealtToChampions": 20325,
+                    "win": true
+                },
+                {
+                    "summonerName": "plum blossoms",
+                    "teamPosition": "MIDDLE",
+                    "goldEarned": 14437,
+                    "championName": "Yone",
+                    "totalDamageDealtToChampions": 19816,
+                    "win": true
+                },
+                {
+                    "summonerName": "Notiko",
+                    "teamPosition": "BOTTOM",
+                    "goldEarned": 15090,
+                    "championName": "Jinx",
+                    "totalDamageDealtToChampions": 23791,
+                    "win": true
+                },
+                {
+                    "summonerName": "alvarooo",
+                    "teamPosition": "UTILITY",
+                    "goldEarned": 7498,
+                    "championName": "Nautilus",
+                    "totalDamageDealtToChampions": 7979,
+                    "win": true
+                },
+                {
+                    "summonerName": "markyyy",
+                    "teamPosition": "TOP",
+                    "goldEarned": 10693,
+                    "championName": "Gnar",
+                    "totalDamageDealtToChampions": 15602,
+                    "win": false
+                },
+                {
+                    "summonerName": "Agurin",
+                    "teamPosition": "JUNGLE",
+                    "goldEarned": 12769,
+                    "championName": "JarvanIV",
+                    "totalDamageDealtToChampions": 17398,
+                    "win": false
+                },
+                {
+                    "summonerName": "ACD",
+                    "teamPosition": "MIDDLE",
+                    "goldEarned": 10504,
+                    "championName": "Sylas",
+                    "totalDamageDealtToChampions": 13498,
+                    "win": false
+                },
+                {
+                    "summonerName": "LPG ZAMULEK",
+                    "teamPosition": "BOTTOM",
+                    "goldEarned": 12323,
+                    "championName": "Aphelios",
+                    "totalDamageDealtToChampions": 16731,
+                    "win": false
+                },
+                {
+                    "summonerName": "Seneca LFT",
+                    "teamPosition": "UTILITY",
+                    "goldEarned": 7905,
+                    "championName": "Thresh",
+                    "totalDamageDealtToChampions": 5566,
+                    "win": false
+                }
+            ],
+            "teams": [
+                {
+                    "win": true,
+                    "teamId": 100
+                },
+                {
+                    "win": false,
+                    "teamId": 200
+                }
+            ]
+        }
+    }
+]
