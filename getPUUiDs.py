@@ -11,7 +11,7 @@ def getPUUIDPerPlayer(region,id):
     puuid = watcher.summoner.by_id(region,id)
     return puuid
 
-with open('top200PlayersEUW.json', 'r') as f:
+with open('top300PlayersEUW.json', 'r') as f:
     top200PlayersEUW = json.load(f)
 
 print(top200PlayersEUW["entries"][0]["summonerId"])

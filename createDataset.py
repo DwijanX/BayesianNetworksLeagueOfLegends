@@ -6,7 +6,7 @@ import pandas as pd
 watcher = LolWatcher(api_key)
 region = 'euw1'
 
-with open('top200PlayersEUW.json', 'r') as f:
+with open('top300PlayersEUW.json', 'r') as f:
     playersWinrate = json.load(f)
 
 with open('summonerInfo.json', 'r') as f:
@@ -50,19 +50,31 @@ def find_position_by_summoner_name(teamPosition):
 
 
 def create_dataframe():
-    columns = ['TeamBlueTopGoldEarned', 'TeamBlueTopChampionName', 'TeamBlueTopDamageDealt', 'TeamBlueTopWins', 'TeamBlueTopLosses','TeamBlueTopLeaguePoints'
-                ,'TeamRedTopGoldEarned', 'TeamRedTopChampionName', 'TeamRedTopDamageDealt', 'TeamRedTopWins', 'TeamRedTopLosses','TeamRedTopLeaguePoints'
-                ,'TeamBlueJungleGoldEarned', 'TeamBlueJungleChampionName', 'TeamBlueJungleDamageDealt', 'TeamBlueJungleWins', 'TeamBlueJungleLosses', 'TeamBlueJungleLeaguePoints'
-                ,'TeamRedJungleGoldEarned', 'TeamRedJungleChampionName', 'TeamRedJungleDamageDealt', 'TeamRedJungleWins', 'TeamRedJungleLosses', 'TeamRedJungleLeaguePoints'
-                ,'TeamBlueMidGoldEarned', 'TeamBlueMidChampionName', 'TeamBlueMidDamageDealt', 'TeamBlueMidWins', 'TeamBlueMidLosses', 'TeamBlueMidLeaguePoints'
-                ,'TeamRedMidGoldEarned', 'TeamRedMidChampionName', 'TeamRedMidDamageDealt', 'TeamRedMidWins', 'TeamRedMidLosses', 'TeamRedMidLeaguePoints'
-                ,'TeamBlueADCGoldEarned', 'TeamBlueADCChampionName', 'TeamBlueADCDamageDealt', 'TeamBlueADCWins', 'TeamBlueADCLosses', 'TeamBlueADCLeaguePoints'
-                ,'TeamRedADCGoldEarned', 'TeamRedADCChampionName', 'TeamRedADCDamageDealt', 'TeamRedADCWins', 'TeamRedADCLosses', 'TeamRedADCLeaguePoints'
-                ,'TeamBlueSupportGoldEarned', 'TeamBlueSupportChampionName', 'TeamBlueSupportDamageDealt', 'TeamBlueSupportWins', 'TeamBlueSupportLosses', 'TeamBlueSupportLeaguePoints'
-                ,'TeamRedSupportGoldEarned', 'TeamRedSupportChampionName', 'TeamRedSupportDamageDealt', 'TeamRedSupportWins', 'TeamRedSupportLosses', 'TeamRedSupportLeaguePoints'
+    columns = ['TeamBlueTopGoldEarned', 'TeamBlueTopChampionName', 'TeamBlueTopDamageDealt','TeamBlueTopWinRate', 'TeamBlueTopWins', 'TeamBlueTopLosses','TeamBlueTopLeaguePoints'
+                ,'TeamRedTopGoldEarned', 'TeamRedTopChampionName', 'TeamRedTopDamageDealt','TeamRedTopWinRate', 'TeamRedTopWins', 'TeamRedTopLosses','TeamRedTopLeaguePoints'
+                ,'TeamBlueJungleGoldEarned', 'TeamBlueJungleChampionName', 'TeamBlueJungleDamageDealt','TeamBlueJungleWinRate',  'TeamBlueJungleWins', 'TeamBlueJungleLosses', 'TeamBlueJungleLeaguePoints'
+                ,'TeamRedJungleGoldEarned', 'TeamRedJungleChampionName', 'TeamRedJungleDamageDealt','TeamRedJungleWinRate',  'TeamRedJungleWins', 'TeamRedJungleLosses', 'TeamRedJungleLeaguePoints'
+                ,'TeamBlueMidGoldEarned', 'TeamBlueMidChampionName', 'TeamBlueMidDamageDealt','TeamBlueMidWinRate',  'TeamBlueMidWins', 'TeamBlueMidLosses', 'TeamBlueMidLeaguePoints'
+                ,'TeamRedMidGoldEarned', 'TeamRedMidChampionName', 'TeamRedMidDamageDealt', 'TeamRedMidWinRate','TeamRedMidWins',  'TeamRedMidLosses', 'TeamRedMidLeaguePoints'
+                ,'TeamBlueADCGoldEarned', 'TeamBlueADCChampionName', 'TeamBlueADCDamageDealt', 'TeamBlueADCWinRate','TeamBlueADCWins',  'TeamBlueADCLosses', 'TeamBlueADCLeaguePoints'
+                ,'TeamRedADCGoldEarned', 'TeamRedADCChampionName', 'TeamRedADCDamageDealt','TeamRedADCWinRate',  'TeamRedADCWins', 'TeamRedADCLosses', 'TeamRedADCLeaguePoints'
+                ,'TeamBlueSupportGoldEarned', 'TeamBlueSupportChampionName', 'TeamBlueSupportDamageDealt','TeamBlueSupportWinRate',  'TeamBlueSupportWins', 'TeamBlueSupportLosses', 'TeamBlueSupportLeaguePoints'
+                ,'TeamRedSupportGoldEarned', 'TeamRedSupportChampionName', 'TeamRedSupportDamageDealt','TeamRedSupportWinRate',  'TeamRedSupportWins', 'TeamRedSupportLosses', 'TeamRedSupportLeaguePoints'
                 ,'win'
                ]
-    df = pd.DataFrame(columns=columns)
+    columns2 = [ 'TeamBlueTopChampionName','TeamBlueTopWinRate', 'TeamBlueTopWins', 'TeamBlueTopLosses','TeamBlueTopLeaguePoints'
+                , 'TeamRedTopChampionName','TeamRedTopWinRate', 'TeamRedTopWins', 'TeamRedTopLosses','TeamRedTopLeaguePoints'
+                , 'TeamBlueJungleChampionName','TeamBlueJungleWinRate',  'TeamBlueJungleWins', 'TeamBlueJungleLosses', 'TeamBlueJungleLeaguePoints'
+                , 'TeamRedJungleChampionName','TeamRedJungleWinRate',  'TeamRedJungleWins', 'TeamRedJungleLosses', 'TeamRedJungleLeaguePoints'
+                , 'TeamBlueMidChampionName','TeamBlueMidWinRate',  'TeamBlueMidWins', 'TeamBlueMidLosses', 'TeamBlueMidLeaguePoints'
+                , 'TeamRedMidChampionName', 'TeamRedMidWinRate','TeamRedMidWins',  'TeamRedMidLosses', 'TeamRedMidLeaguePoints'
+                , 'TeamBlueADCChampionName', 'TeamBlueADCWinRate','TeamBlueADCWins',  'TeamBlueADCLosses', 'TeamBlueADCLeaguePoints'
+                , 'TeamRedADCChampionName','TeamRedADCWinRate',  'TeamRedADCWins', 'TeamRedADCLosses', 'TeamRedADCLeaguePoints'
+                , 'TeamBlueSupportChampionName','TeamBlueSupportWinRate',  'TeamBlueSupportWins', 'TeamBlueSupportLosses', 'TeamBlueSupportLeaguePoints'
+                , 'TeamRedSupportChampionName','TeamRedSupportWinRate',  'TeamRedSupportWins', 'TeamRedSupportLosses', 'TeamRedSupportLeaguePoints'
+                ,'win'
+               ]
+    df = pd.DataFrame(columns=columns2)
     return df
 
 def add_Player_to_Dataframe(df, participant, side, position, player_data, index, champion_number):
@@ -70,13 +82,15 @@ def add_Player_to_Dataframe(df, participant, side, position, player_data, index,
     gold_col = f'Team{side}{position}GoldEarned'
     champ_col = f'Team{side}{position}ChampionName'
     damage_col = f'Team{side}{position}DamageDealt'
+    winrate_col = f'Team{side}{position}WinRate'
     wins_col = f'Team{side}{position}Wins'
     losses_col = f'Team{side}{position}Losses'
     lp_col = f'Team{side}{position}LeaguePoints'
     
-    df.loc[index, gold_col] = participant['goldEarned']
+    #df.loc[index, gold_col] = participant['goldEarned']
     df.loc[index, champ_col] = champion_number[participant['championName'].lower()]
-    df.loc[index, damage_col] = participant['totalDamageDealtToChampions']
+    #df.loc[index, damage_col] = participant['totalDamageDealtToChampions']
+    df.loc[index,winrate_col]=round(player_data['wins']/(player_data['wins']+player_data['losses']),2)
     df.loc[index, wins_col] =  player_data['wins']
     df.loc[index, losses_col] =  player_data['losses']
     df.loc[index, lp_col] =  player_data['leaguePoints']
@@ -123,9 +137,9 @@ for matchKey in matchesData:
     print(index)
 
 # save DataFrame to a CSV file
-df.to_csv('DataSetLeagueOfLegends.csv', index=False)
+df.to_csv('DataSetLeagueOfLegends2.csv', index=False)
 
 json_object = json.dumps(champion_number, indent=4)
 
-with open("champion_number.json", "w") as outfile:
-    outfile.write(json_object)
+#with open("champion_number.json", "w") as outfile:
+#    outfile.write(json_object)
